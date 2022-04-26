@@ -1,0 +1,45 @@
+///////////////////// NAV - BAR /////////////////////
+.logo {
+    margin-right: 5rem;
+}
+
+.nav-bar {
+    &_ul {
+        margin-right: auto;
+        display: flex;
+        list-style: none;
+    }
+
+    &_li {
+        margin-right: 1.7rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &_link:link,
+    &_link:visited {
+        text-decoration: none;
+        font-size: 0.9rem;
+        color: var(--Medium-Gray);
+    }
+
+    &_arrow {
+        margin-left: 0.5rem;
+    }
+
+    &_login:link,
+    &_login:visited {
+        margin-right: 2rem;
+        color: var(--Medium-Gray);
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    &_btn {
+        padding: 0.5rem 1.5rem;
+        border: #000;
+        border-radius: 12px;
+        color: var(--Medium-Gray);
+        }
+}
+///////////////////// TOP /////////////////////

@@ -1,0 +1,14 @@
+.container {
+    min-height: 100vh;
+    background-color: rosybrown;
+}
+
+.nav-bar {
+    height: 4rem;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
