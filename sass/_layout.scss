@@ -1,14 +1,38 @@
 .container {
     min-height: 100vh;
-    background-color: rosybrown;
 }
 
 .nav-bar {
     height: 4rem;
-    background-color: green;
     display: flex;
     align-items: center;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
     padding: 0 3rem;
+
+    @media (max-width: 1000px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10vw;
+    }
+}
+
+.top {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    padding: 0 3rem;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        padding-bottom: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 450px) {
+        padding: 0 8vw;
+    }
 }

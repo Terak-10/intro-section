@@ -3,11 +3,22 @@
     margin-right: 5rem;
 }
 
+.hamburger {
+    display: none;
+
+    @media (max-width: 1000px) {
+        display: inline-block;
+    }
+}
+
 .nav-bar {
     &_ul {
         margin-right: auto;
         display: flex;
         list-style: none;
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
 
     &_li {
@@ -21,6 +32,13 @@
         text-decoration: none;
         font-size: 0.9rem;
         color: var(--Medium-Gray);
+        transition: .2s all;
+    }
+
+    &_link:link:hover,
+    &_link:visited:hover {
+        color: #000;
+        cursor: pointer;
     }
 
     &_arrow {
@@ -29,17 +47,159 @@
 
     &_login:link,
     &_login:visited {
-        margin-right: 2rem;
+        margin-right: 2.5rem;
         color: var(--Medium-Gray);
         text-decoration: none;
         font-size: 0.9rem;
+        transition: .2s all;
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    &_login:link:hover,
+    &_login:visited:hover {
+       color: #000;
+       cursor: pointer;
     }
 
     &_btn {
         padding: 0.5rem 1.5rem;
-        border: #000;
+        border: 1px solid #000;
         border-radius: 12px;
         color: var(--Medium-Gray);
+        background-color: #fff;
+        transition: .05s all;
+        @media (max-width: 1000px) {
+            display: none;
         }
+        }
+
+        &_btn:hover {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #000;
+            border-radius: 12px;
+            color: #000;
+            font-weight: 500;
+            cursor: pointer;
+            }
 }
 ///////////////////// TOP /////////////////////
+.text-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(min-content,max-content) max-content 3.2rem 1fr;
+    justify-items: start;
+    align-items: flex-end;
+    row-gap: 2rem;
+
+    @media (max-width: 1000px) {
+        grid-row: 2 / 3;
+        justify-items: center;
+    }
+
+    &_h-1 {
+        font-size: clamp(3.8rem, 6vw, 5.2rem);
+        line-height: 1.05;
+        padding-top: 4rem;
+
+        @media (max-width: 1000px) {
+            text-align: center;
+            font-size: clamp(1.8rem, 6vw, 5.2rem)
+        }
+    }
+
+    &_p {
+        align-self: flex-start;
+        padding-top: 1.5rem;
+        width: 75%;
+        font-size: 1.05rem;
+        line-height: 1.5;
+
+        @media (max-width: 1000px) {
+            text-align: center;
+            font-size: clamp(0.8rem, 2.8vw, 1.2rem);
+        }
+
+        @media (max-width: 500px) {
+            text-align: center;
+            font-size: clamp(0.8rem, 2.8vw, 1.2rem);
+            width: 90%;
+        }
+    }
+
+    &_btn {
+        padding: 0.7rem 1.2rem;
+        border-radius: 10px;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        background-color: #000;
+        transition: .05s all;
+        align-self: center;
+    }
+
+    &_btn:hover {
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #000;
+        cursor: pointer;
+    }
+
+    &_logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+
+        @media (max-width: 570px) {
+            padding-top: 1.5rem;
+        }
+    }
+
+    &_client{
+       margin-right: 1rem;
+
+       @media (max-width: 570px) {
+        width: 15vw;
+        }
+    }
+}
+
+.bcg-image {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 1000px) {
+        grid-row: 1 / 2;
+        justify-content: center;
+    }
+
+    &_img {
+        width: clamp(28rem, 32vw, 30rem);
+        height: 35rem;
+        display: block;
+        font-size: 0; 
+
+        @media (max-width: 1000px) {
+            width: clamp(20rem, 60vw, 55rem);
+            height: 35rem;
+            }
+
+            @media (max-width: 1000px) {
+                display: none;
+                 }
+    }
+
+    &_img-mobile {
+        display: none;
+        width: 80vw;
+        height: 50vw;
+        font-size: 0; 
+
+        @media (max-width: 1000px) {
+           display: block;
+            }
+    }
+}
